@@ -49,10 +49,10 @@ class OnBoardingActivity : AppCompatActivity() {
 
     override fun onConfigurationChanged(newConfig: Configuration?) {
         super.onConfigurationChanged(newConfig)
-        Log.d( "Atlas", if (newConfig!!.orientation == ORIENTATION_PORTRAIT ) "Portrait" else "Landscape")
+        Log.d( "Atlas", if (newConfig!!.orientation == ORIENTATION_PORTRAIT ) "Portrait"  else if(newConfig!!.screenLayout == SCREENLAYOUT_SIZE_XLARGE) "Tablet" else "Landscape")
 
         var pictureImageView: ImageView = findViewById(R.id.picture)
-        pictureImageView.setImageResource(if (   newConfig.orientation == ORIENTATION_PORTRAIT ) {R.drawable.unknown} else {R.drawable.landsscape})
+        pictureImageView.setImageResource(if (   newConfig.orientation == ORIENTATION_PORTRAIT ) {R.drawable.unknown} else if (newConfig.screenLayout == SCREENLAYOUT_SIZE_XLARGE ) { R.drawable.tabletimg} else {R.drawable.landsscape})
     }
 }
 

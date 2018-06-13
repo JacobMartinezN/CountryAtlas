@@ -13,7 +13,7 @@
         android:id="@+id/picture"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:src="@drawable/landsscape"
+        android:src="@drawable/tabletimg"
         app:layout_constraintBottom_toTopOf="@id/start_buttom"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
